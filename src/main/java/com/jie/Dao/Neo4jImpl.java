@@ -26,7 +26,6 @@ public class Neo4jImpl implements StudentDao {
         int i = 0;
         for (Student student1 : this.repository.findAll()) {
             student.put(++i, student1);
-            System.out.println(student);
         }
 
         return student.values();
@@ -34,7 +33,17 @@ public class Neo4jImpl implements StudentDao {
 
     @Override
     public Student getStudentByID(int id) {
-        return null;
+        int i = 1;
+        Student result = null;
+        for (Student student1 : this.repository.findAll()) {
+            System.out.println(student1.toString());
+            if (i == id) {
+                result = student1;
+                break;
+            }
+            ++i;
+        }
+        return result;
     }
 
     @Override

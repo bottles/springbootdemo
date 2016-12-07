@@ -12,6 +12,21 @@ import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
 public class Student {
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     @GraphId
     private Long id;
@@ -19,6 +34,8 @@ public class Student {
     private int studentID;
     private String firstName;
     private String lastName;
+    private String userName;
+    private String password;
 
     public Student() {
     }
@@ -32,6 +49,13 @@ public class Student {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+    public Student(int studentID, String firstName, String lastName, String userName, String password) {
+        this.studentID = studentID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
     }
 
     @Override

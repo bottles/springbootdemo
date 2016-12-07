@@ -20,9 +20,9 @@ public class StudentDaoImpl implements StudentDao {
     static {
         student = new HashMap<Integer, Student>(){
             {
-                put(1, new Student(1, "Said", "Computer Science"));
-                put(2, new Student(2, "Said2", "Art"));
-                put(3, new Student(3, "Said3", "Finance"));
+                put(1, new Student(1, "Steve", "Blackburn", "Steve", "123456"));
+                put(2, new Student(2, "Alice", "Kuss", "Alice", "111111"));
+                put(3, new Student(3, "Mario", "Maker", "Mario", "111111"));
             }
         };
     }

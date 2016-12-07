@@ -18,7 +18,6 @@ public class StudentService {
     private StudentDao studentDao;
 
     public Collection<Student> getAllStudents() {
-        System.out.println("haha");
         return this.studentDao.getAllStudents();
     }
 
